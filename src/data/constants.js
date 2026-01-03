@@ -10,8 +10,7 @@ export const DIFFICULTIES = {
     gold: 5, 
     color: 'text-emerald-500', 
     border: 'border-emerald-500/50', 
-    bg: 'bg-emerald-500/10', 
-    glow: 'hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:border-emerald-400' 
+    bg: 'bg-emerald-500/10' 
   },
   medium: { 
     id: 'medium', 
@@ -20,8 +19,7 @@ export const DIFFICULTIES = {
     gold: 15, 
     color: 'text-blue-500', 
     border: 'border-blue-500/50', 
-    bg: 'bg-blue-500/10', 
-    glow: 'hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:border-blue-400' 
+    bg: 'bg-blue-500/10' 
   },
   hard: { 
     id: 'hard', 
@@ -30,66 +28,126 @@ export const DIFFICULTIES = {
     gold: 30, 
     color: 'text-purple-500', 
     border: 'border-purple-500/50', 
-    bg: 'bg-purple-500/10', 
-    glow: 'hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:border-purple-400' 
+    bg: 'bg-purple-500/10' 
   },
   epic: { 
     id: 'epic', 
     label: 'Épico', 
     xp: 100, 
     gold: 100, 
-    color: 'text-amber-400', // Dourado Vibrante
+    color: 'text-amber-400', 
     border: 'border-amber-500/50', 
-    bg: 'bg-amber-500/10', 
-    glow: 'hover:shadow-[0_0_25px_rgba(251,191,36,0.6)] hover:border-amber-300 ring-1 ring-transparent hover:ring-amber-400/50' // Glow mais intenso
+    bg: 'bg-amber-500/10' 
   },
 };
 
 export const CATEGORIES = {
-  health: { id: 'health', label: 'Saúde', icon: Dumbbell, color: 'text-red-400 bg-red-500/10', hex: 'bg-red-500' },
-  finance: { id: 'finance', label: 'Finanças', icon: Wallet, color: 'text-yellow-400 bg-yellow-500/10', hex: 'bg-yellow-500' },
-  career: { id: 'career', label: 'Carreira', icon: TrendingUp, color: 'text-cyan-400 bg-cyan-500/10', hex: 'bg-cyan-500' },
-  learning: { id: 'learning', label: 'Estudos', icon: Brain, color: 'text-fuchsia-400 bg-fuchsia-500/10', hex: 'bg-fuchsia-500' },
-  other: { id: 'other', label: 'Outros', icon: Star, color: 'text-slate-400 bg-slate-500/10', hex: 'bg-slate-500' },
+  health: { id: 'health', label: 'Saúde', icon: Dumbbell, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+  finance: { id: 'finance', label: 'Finanças', icon: Wallet, color: 'text-amber-400', bg: 'bg-amber-500/10' },
+  career: { id: 'career', label: 'Carreira', icon: TrendingUp, color: 'text-cyan-400', bg: 'bg-cyan-500/10' },
+  learning: { id: 'learning', label: 'Estudos', icon: Brain, color: 'text-fuchsia-400', bg: 'bg-fuchsia-500/10' },
+  other: { id: 'other', label: 'Outros', icon: Star, color: 'text-slate-400', bg: 'bg-slate-500/10' },
 };
 
 export const SPRINTS = {
-  sprint1: { id: 'sprint1', title: 'Trimestre 1', range: 'Jan - Mar', description: 'O Início' },
-  sprint2: { id: 'sprint2', title: 'Trimestre 2', range: 'Abr - Jun', description: 'Consistência' },
-  sprint3: { id: 'sprint3', title: 'Trimestre 3', range: 'Jul - Set', description: 'Expansão' },
-  sprint4: { id: 'sprint4', title: 'Trimestre 4', range: 'Out - Dez', description: 'Reta Final' },
-  ongoing: { id: 'ongoing', title: 'Rotina Base', range: 'Ano Todo', description: 'Hábitos Diários' }
+  sprint1: { id: 'sprint1', title: 'Trimestre 1', range: 'Jan - Mar' },
+  sprint2: { id: 'sprint2', title: 'Trimestre 2', range: 'Abr - Jun' },
+  sprint3: { id: 'sprint3', title: 'Trimestre 3', range: 'Jul - Set' },
+  sprint4: { id: 'sprint4', title: 'Trimestre 4', range: 'Out - Dez' },
+  ongoing: { id: 'ongoing', title: 'Rotina Base', range: 'Ano Todo' }
 };
 
 export const FREQUENCIES = {
     once: { id: 'once', label: 'Única', icon: Target },
     daily: { id: 'daily', label: 'Diária', icon: Repeat },
-    weekly: { id: 'weekly', label: 'Semanal', icon: Calendar }
+    weekly: { id: 'weekly', label: 'Semanal', icon: Calendar },
+    monthly: { id: 'monthly', label: 'Mensal', icon: Star } // NOVO
 };
 
 export const COSMETIC_ITEMS = [
-    { id: 'theme_default', type: 'theme', name: 'Clássico', description: 'O visual original.', cost: 0, 
-      colors: { text: 'from-cyan-400 via-purple-500 to-pink-500', bar: 'bg-gradient-to-r from-purple-600 to-pink-500', btn: 'bg-purple-600 hover:bg-purple-500' } },
-    { id: 'theme_midas', type: 'theme', name: 'Toque de Midas', description: 'Luxo e ouro.', cost: 50, 
-      colors: { text: 'from-yellow-300 via-yellow-500 to-amber-600', bar: 'bg-gradient-to-r from-yellow-400 to-amber-600', btn: 'bg-yellow-600 hover:bg-yellow-500' } },
-    { id: 'theme_matrix', type: 'theme', name: 'The Matrix', description: 'Hacker style.', cost: 30, 
-      colors: { text: 'from-green-400 via-emerald-500 to-teal-600', bar: 'bg-gradient-to-r from-green-500 to-emerald-700', btn: 'bg-green-700 hover:bg-green-600' } },
-    { id: 'theme_cyber', type: 'theme', name: 'Cyberpunk 2077', description: 'Neon vibrante.', cost: 40, 
-      colors: { text: 'from-yellow-400 via-red-500 to-blue-600', bar: 'bg-gradient-to-r from-yellow-400 to-red-500', btn: 'bg-red-600 hover:bg-red-500' } },
-    
-    { id: 'border_default', type: 'border', name: 'Sem Borda', description: 'Simples e limpo.', cost: 0, className: '' },
-    { id: 'border_bronze', type: 'border', name: 'Bronze', description: 'Iniciante.', cost: 10, className: 'ring-2 ring-orange-700' },
-    { id: 'border_gold', type: 'border', name: 'Ouro Maciço', description: 'Ostentação.', cost: 100, className: 'ring-4 ring-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.5)]' },
-    { id: 'border_neon', type: 'border', name: 'Neon Blue', description: 'Futurista.', cost: 50, className: 'ring-2 ring-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]' },
+    { 
+      id: 'theme_default', 
+      type: 'theme', 
+      name: 'Clássico', 
+      description: 'Equilíbrio visual.', 
+      cost: 0, 
+      font: "sans-serif",
+      palette: 'purple',
+      previewGradient: 'from-purple-500 to-pink-500'
+    },
+    { 
+      id: 'theme_midas', 
+      type: 'theme', 
+      name: 'Toque de Midas', 
+      description: 'Luxo e ostentação.', 
+      cost: 50, 
+      font: "'Cinzel', serif",
+      palette: 'amber',
+      previewGradient: 'from-amber-400 to-yellow-600'
+    },
+    { 
+      id: 'theme_matrix', 
+      type: 'theme', 
+      name: 'The Matrix', 
+      description: 'Wake up, Neo.', 
+      cost: 30, 
+      font: "'JetBrains Mono', monospace",
+      palette: 'green',
+      effect: 'matrix',
+      previewGradient: 'from-green-500 to-emerald-700'
+    },
+    { 
+      id: 'theme_cyber', 
+      type: 'theme', 
+      name: 'Cyberpunk', 
+      description: 'High tech, low life.', 
+      cost: 40, 
+      font: "'Orbitron', sans-serif",
+      palette: 'cyan',
+      previewGradient: 'from-cyan-400 to-blue-600'
+    },
+    { id: 'border_bronze', type: 'border', name: 'Bronze', description: 'Iniciante.', cost: 10, className: 'ring-2 ring-orange-700 bg-orange-700/10' },
+    { id: 'border_gold', type: 'border', name: 'Ouro Maciço', description: 'Ostentação.', cost: 100, className: 'ring-4 ring-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.5)] bg-yellow-400/10' },
+    { id: 'border_neon', type: 'border', name: 'Neon Blue', description: 'Futurista.', cost: 50, className: 'ring-2 ring-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)] bg-cyan-400/10' },
 ];
 
 export const INITIAL_QUESTS = [
-  { id: 'q1', type: 'checklist', title: 'Ler 10 páginas', category: 'learning', difficulty: 'easy', sprint: 'ongoing', frequency: 'daily', completed: false, subtasks: [] },
-  { id: 'q2', type: 'checklist', title: 'Treino (30 min)', category: 'health', difficulty: 'medium', sprint: 'ongoing', frequency: 'daily', completed: false, subtasks: [] },
-  { id: 'q3', type: 'progressive', title: 'Reserva de Emergência', category: 'finance', difficulty: 'hard', sprint: 'sprint1', frequency: 'once', completed: false, progress: { current: 0, target: 1000, unit: 'R$' }, subtasks: [] }
+  { 
+    type: 'checklist', 
+    title: 'Beber 2L de Água', 
+    category: 'health', 
+    difficulty: 'easy', 
+    sprint: 'ongoing', 
+    frequency: 'daily', 
+    completed: false, 
+    subtasks: [] 
+  },
+  { 
+    type: 'checklist', 
+    title: 'Ler 10 Páginas', 
+    category: 'learning', 
+    difficulty: 'medium', 
+    sprint: 'ongoing', 
+    frequency: 'daily', 
+    completed: false, 
+    subtasks: [] 
+  },
+  {
+    type: 'progressive',
+    title: 'Reserva de Emergência',
+    category: 'finance',
+    difficulty: 'hard',
+    sprint: 'ongoing',
+    frequency: 'once',
+    completed: false,
+    progress: { current: 0, target: 1000, unit: 'R$' },
+    subtasks: []
+  }
 ];
 
 export const INITIAL_REWARDS = [
-  { id: 'r1', title: 'Pedir Delivery', cost: 150 },
-  { id: 'r2', title: 'Cinema / Streaming', cost: 50 }
+  { title: 'Café da Tarde Premium', cost: 30 },
+  { title: 'Episódio de Série (Noite)', cost: 50 },
+  { title: 'Pedir Delivery (Fim de Semana)', cost: 200 },
+  { title: 'Comprar um Livro Novo', cost: 300 }
 ];
