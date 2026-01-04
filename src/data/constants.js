@@ -1,5 +1,6 @@
 import { 
-  Dumbbell, Wallet, TrendingUp, Brain, Star, Target, Repeat, Calendar 
+  Dumbbell, Wallet, TrendingUp, Brain, Star, Target, Repeat, Calendar, 
+  Coins, BookOpen, Clock, Footprints, Droplets, Scale
 } from 'lucide-react';
 
 export const DIFFICULTIES = {
@@ -61,7 +62,59 @@ export const FREQUENCIES = {
     once: { id: 'once', label: 'Única', icon: Target },
     daily: { id: 'daily', label: 'Diária', icon: Repeat },
     weekly: { id: 'weekly', label: 'Semanal', icon: Calendar },
-    monthly: { id: 'monthly', label: 'Mensal', icon: Star } // NOVO
+    monthly: { id: 'monthly', label: 'Mensal', icon: Star }
+};
+
+// --- MÉTRICAS ATUALIZADAS (TEMPO AGORA É 'h') ---
+export const METRICS = {
+  custom: { label: 'Outro', unit: '', icon: Target },
+  money: { label: 'Dinheiro', unit: 'R$', icon: Coins },
+  pages: { label: 'Leitura', unit: 'pág', icon: BookOpen },
+  time: { label: 'Tempo', unit: 'h', icon: Clock }, // <--- Alterado para 'h'
+  distance: { label: 'Distância', unit: 'km', icon: Footprints },
+  workouts: { label: 'Treinos', unit: 'dias', icon: Dumbbell },
+  bodyweight: { label: 'Peso Corp.', unit: 'kg', icon: Scale },
+  water: { label: 'Água', unit: 'ml', icon: Droplets },
+};
+
+export const PLAN_TEMPLATES = {
+  finance_savings: {
+    id: 'finance_savings',
+    label: 'Poupança e Investimentos',
+    description: 'Defina o mês final e deixe o app calcular.',
+    icon: Wallet,
+    color: 'text-emerald-400',
+    questions: [
+      { id: 'targetValue', label: 'Qual o valor total (R$)?', type: 'number', placeholder: 'Ex: 10000' },
+      { id: 'startMonth', label: 'Começar em qual mês?', type: 'select', options: [
+        { label: 'Janeiro', value: 0 }, { label: 'Fevereiro', value: 1 }, { label: 'Março', value: 2 },
+        { label: 'Abril', value: 3 }, { label: 'Maio', value: 4 }, { label: 'Junho', value: 5 },
+        { label: 'Julho', value: 6 }, { label: 'Agosto', value: 7 }, { label: 'Setembro', value: 8 },
+        { label: 'Outubro', value: 9 }, { label: 'Novembro', value: 10 }, { label: 'Dezembro', value: 11 }
+      ]},
+      { id: 'endMonth', label: 'Até quando (Mês Final)?', type: 'select', options: [
+        { label: 'Janeiro', value: 0 }, { label: 'Fevereiro', value: 1 }, { label: 'Março', value: 2 },
+        { label: 'Abril', value: 3 }, { label: 'Maio', value: 4 }, { label: 'Junho', value: 5 },
+        { label: 'Julho', value: 6 }, { label: 'Agosto', value: 7 }, { label: 'Setembro', value: 8 },
+        { label: 'Outubro', value: 9 }, { label: 'Novembro', value: 10 }, { label: 'Dezembro', value: 11 }
+      ]}
+    ]
+  },
+  reading_goal: {
+    id: 'reading_goal',
+    label: 'Meta de Leitura',
+    description: 'Ler uma quantidade de livros.',
+    icon: Brain,
+    color: 'text-blue-400',
+    questions: [
+      { id: 'targetValue', label: 'Quantos livros?', type: 'number', placeholder: 'Ex: 12' },
+      { id: 'duration', label: 'Em quanto tempo (meses)?', type: 'number', placeholder: 'Ex: 12 (1 ano)' },
+      { id: 'frequency', label: 'Modo de distribuição?', type: 'select', options: [
+        { label: 'Focado (1 por vez)', value: 'focused' },
+        { label: 'Livre (Lista completa)', value: 'flexible' }
+      ]}
+    ]
+  }
 };
 
 export const COSMETIC_ITEMS = [

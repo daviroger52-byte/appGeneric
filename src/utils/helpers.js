@@ -64,3 +64,9 @@ export const compressImage = (file, maxWidth = 300) => {
         };
     });
 };
+
+export const getTodayStr = () => {
+    return new Date().toLocaleDateString('en-CA', {
+        timeZone: 'America/Sao_Paulo'
+    });
+};
